@@ -1,0 +1,4 @@
+// comentarios
+/* */ 
+
+alert("Hola mundo");

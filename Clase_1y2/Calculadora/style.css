@@ -1,0 +1,31 @@
+#pantalla {
+    padding: 16px 32px;
+    font-size: 25px;
+    margin: 8px 0;
+    border: 1px solid silver;
+    border-radius: 1px;
+    text-align: left;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+
+ 
+}
+#conte{
+    background: #ddb2b2;
+}
+
+.container{
+    width: 30%;
+    text-align: center;
+    background: #FFC300;
+}
+
+#calculadora{
+    display: inline-block;
+}
+
+.btn{
+    margin: 6px;
+    width: 70px;
+    height: 70px;
+}
