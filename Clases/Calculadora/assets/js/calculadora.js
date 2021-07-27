@@ -1,4 +1,3 @@
-
 let btn0 = document.getElementById("btn0");
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
@@ -14,11 +13,58 @@ let borrar = document.getElementById("btn<=");
 
 let pantalla = document.getElementById("pantalla");
 
-let op = prompt("ingrese \n 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir \n 5 para valor absoluto |x|");
+const operaciones = () => {
+  let op = prompt(
+    "ingrese \n 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir \n 5 para  salir"
+  );
 
-while (op !== "1" && op !== "2" && op !== "3" && op !== "4" && op !== "5") {
+  while (op !== "1" && op !== "2" && op !== "3" && op !== "4" && op !== "5") {
     alert("Favor ingrese una opción valida entre 1 al 5");
-    op = prompt("ingrese 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir \n 5 para valor absoluto |x|");
+    op = prompt(
+      "ingrese 1 para sumar \n 2 para restar \n 3 para multiplicar \n 4 para dividir \n 5 para valor absoluto |x|"
+    );
+  }
+  if (op === "5") {
+    return;
+  }
+  let num1 = parseFloat(prompt("Ingrese numero 1"));
+  let num2 = parseFloat(prompt("Ingrese numero 2"));
+  let resultado = 0; // null - undefine - non
+
+  if (op === "1") {
+    resultado = num1 + num2;
+  }
+  if (op === "2") {
+    resultado = num1 - num2;
+  }
+  if (op === "3") {
+    resultado = num1 * num2;
+  }
+  if (op === "4") {
+    if (num2 === 0) {
+      return alert("No se puede divir por Cero");
+    } else {
+      resultado = num1 / num2;
+    }
+  }
+
+  return alert("El resultado es: " + resultado);
+};
+
+let opt = prompt(
+  "Ingresa por favor \n 1 para iniciar o volver a ingresar una operación \n 5 para salir"
+);
+
+while (opt === "1" && opt !== "5") {
+    
+    operaciones();
+    opt = prompt(
+        "Por favor ingrese \n 1 para iniciar una operación \n 5 para salir"
+      );
+    if (opt === "5") {
+        break;
+    }
+    
 }
 
 
