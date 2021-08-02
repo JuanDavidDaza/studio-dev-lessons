@@ -18,4 +18,5 @@ let coleccion = { usuario, mascotas };
 console.log(usuario);
 
 
+
 //pg-page,,,,ajustes, pages, link
